@@ -40,7 +40,7 @@ class PetsController < ApplicationController
     end
     @pet.owner.id = @owner.id
     @pet.update(name: params[:pet_name], owner_id: params[:pet][:owner_id])
- 
+
     redirect "/pets/#{@pet.id}"
   end
 end
