@@ -20,7 +20,7 @@ class PetsController < ApplicationController
     redirect "/pets/#{@pet.id}"
   end
 
-  get "/pets/:id/edit" do 
+  get "/pets/:id/edit" do
 
   end 
 
