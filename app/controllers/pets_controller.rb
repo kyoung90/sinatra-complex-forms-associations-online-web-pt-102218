@@ -38,7 +38,7 @@ class PetsController < ApplicationController
     else
         @owner = Owner.find_by(id: params[:pet][:owner_id])
     end
-    @pet.owner = @owner
+    @pet.owner.id = @owner.id
     @pet.update(params[:pet])
     @pet.save
 
