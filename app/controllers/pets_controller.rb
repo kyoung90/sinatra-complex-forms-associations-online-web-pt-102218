@@ -38,7 +38,6 @@ class PetsController < ApplicationController
     else
         @owner = Owner.find_by(id: params[:pet][:owner_id])
     end
-    @pry
     @pet.update(name: params[:pet_name], owner_id: @owner.id)
 
     redirect "/pets/#{@pet.id}"
