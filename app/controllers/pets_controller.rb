@@ -36,6 +36,7 @@ class PetsController < ApplicationController
         @owner = Owner.create(name: params["owner_name"])
         @pet.owner = @owner
         @pet.update(params[:pet])
+        @pet.save
     else
         @owner = Owner.find_by(id: params[:owner_id])
     end
